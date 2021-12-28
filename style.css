@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --vdarkblue: hsl(233, 47%, 7%);
+  --desatured: hsl(244, 38%, 16%);
+  --softviolet: rgb(170, 92, 219);
+  --white: hsl(0, 0%, 100%);
+  --transparent1: hsla(0, 0%, 100%, 0.75);
+  --transparent2: hsla(0, 0%, 100%, 0.6);
+  --inter: 'Inter', sans-serif;
+  --lexend: 'Lexend Deca', sans-serif;
+  --weight4: 400;
+  --weight7: 700;
+}
+
+body {
+  margin: 0;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  background: var(--vdarkblue);
+}
+
+.bg_blue {
+  background: var(--desatured);
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: var(--inter);
+  font-weight: var(--weight7);
+  font-size: 36px;
+  color: var(--white);
+}
+
+h1 span {
+  color: var(--softviolet);
+}
+
+p {
+  color: var(--transparent2);
+  font-family: var(--inter);
+  font-weight: var(--weight4);
+  font-size: 15px;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: var(--weight7);
+}
+
+.tx {
+  color: var(--transparent2);
+  font-size: 12px;
+  font-family: var(--lexend);
+  font-weight: var(--weight4);
+}
+
+.card_img {
+  display: inline-block;
+  position: relative;
+}
+
+.layer {
+  background-color: var(--softviolet);
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.img {
+  content: url('./images/image-header-mobile.jpg');
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  align-items: center;
+}
+
+.text_card {
+  color: var(--white);
+  text-align: center;
+  margin: 15% 12% 0 12%;
+}
+
+.number {
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .img {
+    content: url('./images/image-header-desktop.jpg');
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: unset;
+  }
+  .container {
+    padding: 0;
+  }
+  .text_card {
+    text-align: unset;
+    margin: 12% 20% 0 12%;
+  }
+  .layer {
+    border-top-left-radius: unset;
+    border-bottom-right-radius: 5px;
+  }
+}
